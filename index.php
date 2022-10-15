@@ -1,4 +1,7 @@
 <?php
+//
+// example url for testing: https://livestreamserver.000webhostapp.com/shoutcast/?get_headers_from_stream=http://shoutcast.pondi.hr:8000/
+//
 $url = $_GET['get_headers_from_stream'];
 $options = array('http' =>
     array(

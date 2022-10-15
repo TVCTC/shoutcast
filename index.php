@@ -8,7 +8,11 @@ $options = array('http' =>
         )
     );
 $context = stream_context_create($options);
-$headers = get_headers($url, false, $context);
+$headers = get_headers($url, true, $context);
+$index = 0;
+foreach ($headers as $header => $value) {
+    echo $index . ' = ' . trim($header) . ' : ' . trim($value) . '<br/>';
+    $index++;
+}
 $json = json_encode($headers);
-echo $json;
 ?>
